@@ -1,0 +1,19 @@
+include ./partials/header
+include ./partials/nav
+
+h2 Welcome to Library
+
+section( class='section_books' )
+
+    each val in info
+        div( class='book' )
+            h1()= val.title
+            h2()= val.author
+            img( src='' + val.image, alt='' )
+            h3()= val.description
+            div(class="selections")
+                a( href='?id=' + val._id ) Delete
+                a( href='?id=' + val._id ) Update
+    //- h2= info
+    
+    
