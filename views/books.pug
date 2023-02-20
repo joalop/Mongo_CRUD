@@ -12,8 +12,8 @@ section( class='section_books' )
             img( src='' + val.image, alt='' )
             h3()= val.description
             div(class="selections")
-                a( href='/Delete?id=' + val._id ) Delete
-                a( href='/Update?id=' + val._id ) Update
+                a( href="/books/delete?id=" + val._id ) Delete
+                a( href=`/books/update?id=${val._id}` ) Update
     //- h2= info
     
     

@@ -1,0 +1,21 @@
+include ./partials/header
+include ./partials/nav
+
+h2 Welcome to Update 
+
+section( class='section_books' )
+
+        each val in data
+            form(action="/books/update", method="post")
+
+                input(type="text", name="title", placeholder="Title ...", value=""+val.title)
+
+                input(type="text", name="author", placeholder="Ahutor ...", value=""+val.author)
+
+                input(type="text", name="image", placeholder="URL Image ...", value=""+val.image)
+
+                textarea(name="description", cols="30", rows="10", placeholder="Description ...")= val.description
+
+                input(type="text", name="id", value="" + val._id, hidden)
+
+                input(type="submit", value="Update Document")
